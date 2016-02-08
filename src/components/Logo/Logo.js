@@ -1,11 +1,11 @@
-
-import React, { Component, PropTypes } from 'react';
+import React, {Component, PropTypes} from 'react';
+import "./style.scss"
 
 class Logo extends Component {
 
 	render() {
 		return (
-			<img className="logo" src={this.props.image}/>
+			<img className="header-logo" src={this.props.image}/>
 		);
 	}
 

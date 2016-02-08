@@ -1,0 +1,14 @@
+@import '../../../node_modules/normalize.css/normalize.css';
+@import '../variables.scss';
+
+/*
+ * Base styles
+ * ========================================================================== */
+
+html {
+	color: #020202;
+	font-weight: 100;
+	font-size: 1em; /* ~16px; */
+	font-family: $font-family-base;
+	line-height: 1.375; /* ~22px */
+}

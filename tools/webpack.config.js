@@ -40,24 +40,28 @@ module.exports = {
 					path.resolve(__dirname, '../src')
 				],
 				loader: 'babel-loader'
-			}, {
+			},
+			{
 				test: /\.scss$/,
-				loaders: [
-					'isomorphic-style-loader',
-					`css-loader?${DEBUG ? 'sourceMap&' : 'minimize&'}modules&localIdentName=` +
-					`${DEBUG ? '[name]_[local]_[hash:base64:3]' : '[hash:base64:4]'}`,
-					'postcss-loader?parser=postcss-scss'
-				]
-			}, {
+				loaders: ["style", "css", "sass"]
+			},
+			{
+				test: /\.css$/,
+				loaders: ["style-loader", "css-loader"]
+			},
+			{
 				test: /\.json$/,
 				loader: 'json-loader'
-			}, {
+			},
+			{
 				test: /\.txt$/,
 				loader: 'raw-loader'
-			}, {
+			},
+			{
 				test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)$/,
 				loader: 'url-loader?limit=10000'
-			}, {
+			},
+			{
 				test: /\.(eot|ttf|wav|mp3)$/,
 				loader: 'file-loader'
 			}
