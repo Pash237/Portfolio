@@ -1,5 +1,4 @@
-
-import React, { Component, PropTypes } from 'react';
+import React, {Component, PropTypes} from 'react';
 
 class Title extends Component {
 

@@ -1,5 +1,4 @@
-
-import React, { Component, PropTypes } from 'react';
+import React, {Component, PropTypes} from 'react';
 import Logo from '../Logo'
 import Title from '../Title'
 import Footer from '../Footer'
