@@ -1,0 +1,5 @@
+{
+	"private": true,
+	"name": "ProjectCell",
+	"main": "./ProjectCell.js"
+}
