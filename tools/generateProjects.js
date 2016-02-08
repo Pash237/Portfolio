@@ -9,9 +9,8 @@ import ncp from 'ncp';
 import dir from 'node-dir';
 import fs from 'fs-extra';
 
-async function generateProjects({watch} = {}) {
-	//ncp('src/assets', 'build')
-
+async function generateProjects({watch} = {})
+{
 	const projectsPath = 'src/projects';
 
 	let projects = []

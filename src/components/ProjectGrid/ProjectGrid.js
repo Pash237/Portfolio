@@ -23,7 +23,7 @@ class ProjectGrid extends Component {
 	}
 
 	loadProjects() {
-		fetch('http://localhost:8080/projects.json')
+		fetch('http://localhost:3000/projects.json')
 			.then((response) => {
 				return response.json();
 			})
