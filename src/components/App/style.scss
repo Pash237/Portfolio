@@ -6,9 +6,12 @@
  * ========================================================================== */
 
 html {
-	color: #020202;
-	font-weight: 100;
-	font-size: 1em; /* ~16px; */
+	color: #353434;
 	font-family: $font-family-base;
-	line-height: 1.375; /* ~22px */
+	background: white;
+}
+
+@font-face {
+	font-family: "ADAM.CG PRO";
+	src: url("../../assets/ADAM.CG_PRO.otf") format("opentype");
 }

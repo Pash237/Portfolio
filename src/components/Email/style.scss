@@ -1,0 +1,26 @@
+@import '../variables.scss';
+
+/* ----------------------------------------------------------- */
+
+$title-font-sizes: (
+		null  : 1.1em,
+		320px : 1.1em,
+		480px : 1.5em,
+		640px : 1.7em,
+		1024px: 1.9em
+);
+
+/* ----------------------------------------------------------- */
+
+.title-page-email-container {
+	text-align: center;
+	text-decoration: none
+}
+
+.title-page-email {
+	font-family: "ADAM.CG PRO", serif;
+	text-decoration: none;
+	color: #e71a1a;
+
+	@include font-size($subtitle-font-sizes);
+}

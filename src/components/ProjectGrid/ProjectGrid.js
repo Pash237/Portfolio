@@ -5,6 +5,12 @@ import Title from '../Title'
 import Footer from '../Footer'
 import ProjectCell from '../ProjectCell'
 import fetch from 'node-fetch'
+import "./style.scss"
+
+//
+//https://github.com/ThisIsDallas/Simple-Grid
+//http://purecss.io/grids/
+//
 
 class ProjectGrid extends Component {
 
@@ -34,7 +40,7 @@ class ProjectGrid extends Component {
 
 	render() {
 		return (
-			<div>
+			<div className="project-grid">
 				{
 					this.state.projects.map((project, i) => {
 						return <ProjectCell key={i} project={project}/>

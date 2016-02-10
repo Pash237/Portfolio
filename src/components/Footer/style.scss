@@ -1,0 +1,40 @@
+@import '../variables.scss';
+
+$footer-button-height: (
+		null  : 1.6em,
+		320px : 1.6em,
+		480px : 1.9em,
+		640px : 1.9em,
+		1024px: 2.9em
+);
+
+.footer {
+	text-align: center;
+
+	@media screen {
+		padding: 2em 0;
+	}
+	@media screen and (min-width: 500px) {
+		padding: 3em 0;
+	}
+	@media screen and (min-width: 1024px) {
+		padding: 4em 0;
+	}
+}
+
+.footer-button {
+	height: 3em;
+	width: auto;
+	margin: 0.5em;
+
+	@include height($footer-button-height);
+}
+
+.footer-copyright {
+	margin: 0 auto;
+	margin-top: 1em;
+	display: block;
+	font-family: "ADAM.CG PRO", serif;
+
+	@include font-size-scale($subtitle-font-sizes, 0.8);
+}

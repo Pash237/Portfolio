@@ -1,0 +1,31 @@
+@import '../variables.scss';
+
+/* ----------------------------------------------------------- */
+
+.title-page-header {
+	text-align: center;
+}
+
+.title-page-header-title {
+	font-family: "ADAM.CG PRO", serif;
+	margin: 0;
+	font-weight: normal;
+
+	@include font-size($title-font-sizes);
+}
+
+.title-page-header-subtitle {
+	color: #a3a3a3;
+	font-weight: normal;
+	margin: 0.6em 0;
+
+	@include font-size($subtitle-font-sizes);
+}
+
+.title-page-header-description {
+	text-align: center;
+	margin-top: 0.8em;
+	margin-bottom: 1.5em;
+
+	@include font-size($description-font-sizes);
+}

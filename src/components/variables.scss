@@ -8,10 +8,74 @@ $white-base:            hsl(255, 255, 255);
  * Typography
  * ========================================================================== */
 
-$font-family-base:      'Segoe UI', 'HelveticaNeue-Light', sans-serif;
+$font-family-base:      'HelveticaNeue-Light', 'Segoe UI', sans-serif;
 
 /*
  * Layout
  * ========================================================================== */
 
-$max-content-width:     1000px;
+$max-content-width:     800px;
+
+
+/* ========================================================================== */
+
+$title-font-sizes: (
+		null  : 1.1em,
+		320px : 1.1em,
+		480px : 1.5em,
+		640px : 1.7em,
+		1024px: 1.9em
+);
+
+$subtitle-font-sizes: (
+		null  : 0.81em,
+		320px : 0.81em,
+		480px : 1.1em,
+		640px : 1.2em,
+		1024px: 1.35em
+);
+
+$description-font-sizes: (
+		null  : 1.1em,
+		320px : 1.1em,
+		480px : 1.5em,
+		640px : 1.7em,
+		1024px: 1.9em
+);
+
+@mixin font-size($fs-map) {
+	@each $fs-breakpoint, $fs-font-size in $fs-map {
+		@if $fs-breakpoint == null {
+			font-size: $fs-font-size;
+		} @else {
+			@media screen and (min-width: $fs-breakpoint) {
+				font-size: $fs-font-size;
+			}
+		}
+	}
+}
+
+@mixin font-size-scale($fs-map, $scale) {
+	@each $fs-breakpoint, $fs-font-size in $fs-map {
+		@if $fs-breakpoint == null {
+			font-size: $fs-font-size * $scale;
+		} @else {
+			@media screen and (min-width: $fs-breakpoint) {
+				font-size: $fs-font-size * $scale;
+			}
+		}
+	}
+}
+
+
+@mixin height($fs-map) {
+	@each $fs-breakpoint, $fs-font-size in $fs-map {
+		@if $fs-breakpoint == null {
+			height: $fs-font-size;
+		} @else {
+			@media screen and (min-width: $fs-breakpoint) {
+				height: $fs-font-size;
+			}
+		}
+	}
+}
