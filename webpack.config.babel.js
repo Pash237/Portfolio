@@ -88,7 +88,7 @@ module.exports = {
 				loader: 'url-loader?limit=10000'
 			},
 			{
-				test: /\.(eot|ttf|wav|mp3)$/,
+				test: /\.(eot|otf|ttf|wav|mp3)$/,
 				loader: 'file-loader'
 			}
 		]
