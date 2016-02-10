@@ -20,7 +20,11 @@ $title-font-sizes: (
 .title-page-email {
 	font-family: "ADAM.CG PRO", serif;
 	text-decoration: none;
-	color: #e71a1a;
+	color: $link-color;
 
 	@include font-size($subtitle-font-sizes);
+
+	&:hover {
+		color: lighten($link-color, 30%);
+	}
 }

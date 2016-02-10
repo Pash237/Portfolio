@@ -30,13 +30,23 @@ $cell-title-font-sizes: (
 .project-cell-image {
 	width: 100%;
 	height: auto;
+
+	&:hover {
+		cursor: pointer;
+	}
 }
 
 .project-cell-title {
 	font-family: "ADAM.CG PRO", serif;
+	display: block;
 	margin: 0.4em 0;
 
 	@include font-size-scale($cell-title-font-sizes, 0.68);
+
+	&:hover {
+		color: $link-color;
+		cursor: pointer;
+	}
 }
 
 .project-cell-subtitle {

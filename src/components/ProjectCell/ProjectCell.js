@@ -7,7 +7,7 @@ class ProjectCell extends Component {
 		return (
 			<li className="project-cell">
 				<img className="project-cell-image" src={this.props.project.title_image}/>
-				<p className="project-cell-title">{this.props.project.title}</p>
+				<a className="project-cell-title">{this.props.project.title}</a>
 				<p className="project-cell-subtitle">{this.props.project.subtitle}</p>
 			</li>
 		);

@@ -7,10 +7,6 @@ import ProjectCell from '../ProjectCell'
 import fetch from 'node-fetch'
 import "./style.scss"
 
-//
-//https://github.com/ThisIsDallas/Simple-Grid
-//http://purecss.io/grids/
-//
 
 class ProjectGrid extends Component {
 
