@@ -8,20 +8,27 @@ $cell-title-font-sizes: (
 );
 
 .project-cell {
+	display: inline-block;
 
-}
+	width: 90%;
+	text-align: center;
 
-.project-cell-image {
-	@media screen {
-		width: 90%;
-	}
-	@media screen and (min-width: 500px) {
+	@media screen and (min-width: 400px) {
 		width: 40%;
+		padding: 0 1em;
+		text-align: left;
 	}
 	@media screen and (min-width: 1024px) {
 		width: 290px;
+		padding: 0 2em;
+		text-align: left;
 	}
 
+	height: auto;
+}
+
+.project-cell-image {
+	width: 100%;
 	height: auto;
 }
 

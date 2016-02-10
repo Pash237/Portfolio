@@ -1,9 +1,13 @@
 @import '../variables.scss';
 
 .project-grid {
-	@media screen {
-		margin: 2em 0;
-	}
+	text-align: center;
+	overflow: auto;
+	list-style: none;
+	padding: 0;
+
+	margin: 1em 0;
+
 	@media screen and (min-width: 500px) {
 		margin: 3em 0;
 	}

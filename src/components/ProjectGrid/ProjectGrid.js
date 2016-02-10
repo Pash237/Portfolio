@@ -40,13 +40,13 @@ class ProjectGrid extends Component {
 
 	render() {
 		return (
-			<div className="project-grid">
+			<ul className="project-grid">
 				{
 					this.state.projects.map((project, i) => {
 						return <ProjectCell key={i} project={project}/>
 					})
 				}
-			</div>
+			</ul>
 		);
 	}
 

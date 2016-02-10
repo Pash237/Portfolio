@@ -11,9 +11,8 @@ $footer-button-height: (
 .footer {
 	text-align: center;
 
-	@media screen {
-		padding: 2em 0;
-	}
+	padding: 2em 0;
+
 	@media screen and (min-width: 500px) {
 		padding: 3em 0;
 	}
