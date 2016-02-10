@@ -1,0 +1,5 @@
+{
+	"private": true,
+	"name": "ProjectPage",
+	"main": "./ProjectPage.js"
+}

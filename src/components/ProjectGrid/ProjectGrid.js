@@ -1,11 +1,11 @@
 
 import React, { Component, PropTypes } from 'react';
-import Logo from '../Logo'
-import Title from '../Title'
-import Footer from '../Footer'
-import ProjectCell from '../ProjectCell'
-import fetch from 'node-fetch'
-import "./style.scss"
+import Logo from '../Logo';
+import Title from '../Title';
+import Footer from '../Footer';
+import ProjectCell from '../ProjectCell';
+import ProjectStore from '../../stores/ProjectStore';
+import "./style.scss";
 
 
 class ProjectGrid extends Component {
@@ -16,22 +16,12 @@ class ProjectGrid extends Component {
 		this.state = {
 			projects: []
 		};
-
-		this.loadProjects = this.loadProjects.bind(this);
 	}
 
 	componentDidMount() {
-		this.loadProjects();
-	}
-
-	loadProjects() {
-		fetch('http://localhost:3000/projects.json')
-			.then((response) => {
-				return response.json();
-			})
-			.then((data) => {
-				this.setState({ projects: data });
-			});
+		ProjectStore.instance.loadProjects((projects) => {
+			this.setState({projects: projects})
+		});
 	}
 
 	render() {

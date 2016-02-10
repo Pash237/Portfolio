@@ -40,6 +40,8 @@ $cell-title-font-sizes: (
 	font-family: "ADAM.CG PRO", serif;
 	display: block;
 	margin: 0.4em 0;
+	text-decoration: none;
+	color: $text-color;
 
 	@include font-size-scale($cell-title-font-sizes, 0.68);
 
