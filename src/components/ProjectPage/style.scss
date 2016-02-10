@@ -1,8 +1,22 @@
 @import '../../../node_modules/normalize.css/normalize.css';
 @import '../variables.scss';
+@import '../TitlePage/style';
 
-.title-page {
-	max-width: $max-content-width;
-	margin: 0 auto;
-	background: white;
+.project-page {
+	@extend .title-page;
+
+	padding: 0 1.5em;
+}
+
+.project-page-screenshots {
+
+}
+
+.project-page-screenshot {
+	height: 30em;
+	margin: 0 1em;
+}
+
+.project-page-description {
+	@include font-size($subtitle-font-sizes);
 }
