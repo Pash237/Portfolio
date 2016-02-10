@@ -19,9 +19,10 @@ class ProjectGrid extends Component {
 	}
 
 	componentDidMount() {
-		ProjectStore.instance.loadProjects((projects) => {
-			this.setState({projects: projects})
-		});
+		ProjectStore.instance.loadProjects()
+			.then((projects) => {
+				this.setState({projects: projects})
+			});
 	}
 
 	render() {

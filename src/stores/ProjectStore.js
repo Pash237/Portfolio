@@ -1,4 +1,4 @@
-import fetch from 'node-fetch'
+import 'whatwg-fetch';
 
 let singleton = Symbol();
 
@@ -19,17 +19,20 @@ class ProjectStore
 		return this._projects;
 	}
 
-	loadProjects(completion) {
-		fetch('http://localhost:3000/projects.json')
-			.then((response) => {
-				return response.json();
-			})
-			.then((data) => {
-				this._projects = data;
-				if (completion) {
-					completion(this._projects);
-				}
-			});
+	loadProjects() {
+		return new Promise((success, failure) => {
+			fetch('/projects.json')
+				.then((response) => {
+					return response.json();
+				})
+				.then((data) => {
+					this._projects = data;
+					success(this._projects);
+				})
+				.catch(e => {
+					failure(e)
+				});
+		});
 	}
 }
 
