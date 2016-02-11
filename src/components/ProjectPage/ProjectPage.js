@@ -1,5 +1,4 @@
 import React, {Component, PropTypes} from 'react';
-import Slider from 'react-slick';
 import jade from 'jade';
 import ProjectStore from '../../stores/ProjectStore'
 import Logo from '../Logo';
@@ -81,22 +80,6 @@ class ProjectPage extends Component {
 	}
 
 	render() {
-		const sliderSettings = {
-			dots: true,
-			infinite: false,
-			speed: 450,
-			slidesToShow: 3,
-			slidesToScroll: 1,
-			lazyLoad: true,
-			responsive: [
-				{breakpoint: 400, settings: {slidesToShow: 1}},
-				{breakpoint: 600, settings: {slidesToShow: 2}},
-				{breakpoint: 100000, settings: {slidesToShow: 3}}],
-			arrows: false,
-			dotsClass: "project-page-screenshots-dots"
-		}
-
-
 		if (!this.project) {
 			return this.emptyProject();
 		} else {
@@ -106,13 +89,13 @@ class ProjectPage extends Component {
 					<Title title={this.project.title}
 					       subtitle={this.project.subtitle}
 					/>
-					<Slider className="project-page-screenshots" {...sliderSettings}>
+					<ul className="project-page-screenshots">
 					{
 						this.project.screenshots.map((screenshot, i) => {
-							return <img key={i} className="project-page-screenshot" src={screenshot}/>
+							return <li key={i} className="project-page-screenshot"><img key={i} src={screenshot}/></li>
 						})
 					}
-					</Slider>
+					</ul>
 					<div className="project-page-description" dangerouslySetInnerHTML={{__html: this.state.projectDescription}} />
 					<div className="project-page-download-badges">
 					{

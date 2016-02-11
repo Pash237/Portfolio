@@ -9,7 +9,43 @@
 }
 
 .project-page-screenshots {
-	overflow: hidden;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	-webkit-overflow-scrolling: touch;
+	white-space: nowrap;
+
+	list-style: none;
+	padding: 0;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	height: 17em;
+	@media screen and (min-width: 500px) {
+		height: 19em;
+	}
+	@media screen and (min-width: 700px) {
+		height: 25em;
+	}
+	@media screen and (min-width: 1024px) {
+		height: 27em;
+	}
+}
+
+.project-page-screenshot {
+	display: inline-block;
+	height: 100%;
+
+	img {
+		height: 100%;
+		width: auto;
+	}
+
+	padding-right: 1em;
+	&:last-child {
+		padding-right: 0;
+	}
 }
 
 .project-page-screenshots-dots {
@@ -51,10 +87,6 @@
 		color: $link-color;
 		opacity: 0.75;
 	}
-}
-
-.project-page-screenshot {
-
 }
 
 .project-page-description {
