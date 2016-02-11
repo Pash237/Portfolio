@@ -9,14 +9,82 @@
 }
 
 .project-page-screenshots {
+	overflow: hidden;
+}
 
+.project-page-screenshots-dots {
+	list-style: none;
+	bottom: -45px;
+	width: 100%;
+	margin-left: 0;
+	padding: 0;
+	text-align: center;
+
+	li {
+		display: inline-block;
+		position: relative;
+		padding: 0 1em;
+
+		button {
+			border: 0;
+			background: 0 0;
+			display: block;
+			height: 100%;
+			width: 100%;
+			left: 0;
+			top: 0;
+			outline: 0;
+			line-height: 0;
+			font-size: 0;
+			color: transparent;
+			padding: 5px;
+			cursor: pointer;
+			position: absolute;
+		}
+	}
+
+	::before {
+		content: "•";
+	}
+
+	.slick-active {
+		color: $link-color;
+		opacity: 0.75;
+	}
 }
 
 .project-page-screenshot {
-	height: 30em;
-	margin: 0 1em;
+
 }
 
 .project-page-description {
 	@include font-size($subtitle-font-sizes);
+}
+
+.project-page-download-badges {
+	text-align: center;
+	margin-top: 1.5em;
+	@media screen and (min-width: 500px) {
+		margin-top: 2.5em;
+	}
+	@media screen and (min-width: 1024px) {
+		margin-top: 3em;
+	}
+}
+
+.project-page-download-badge {
+	img {
+		margin: 0.3em 0.5em;
+		height: 2.5em;
+		@media screen and (min-width: 500px) {
+			margin: 0.4em 0.7em;
+			height: 3.8em;
+		}
+		@media screen and (min-width: 1024px) {
+			margin: 0.5em 1em;
+			height: 4em;
+		}
+
+		width: auto;
+	}
 }
