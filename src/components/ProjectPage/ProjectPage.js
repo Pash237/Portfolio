@@ -63,8 +63,8 @@ class ProjectPage extends Component {
 	emptyProject() {
 		return (<div className="project-page">
 			<Logo image="logo.png"/>
-			<Title title=""
-			       subtitle=""
+			<Title title="&nbsp;"
+			       subtitle="&nbsp;"
 			/>
 		</div>)
 	}
