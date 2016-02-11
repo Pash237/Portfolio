@@ -19,7 +19,7 @@ module.exports = {
 		extensions: ['', '.webpack.js', '.web.js', '.js', '.jsx', '.json']
 	},
 
-	devtool: 'eval-source-map',
+	devtool: 'cheap-module-source-map',
 
 	devServer: {
 		contentBase: "build",
@@ -51,10 +51,15 @@ module.exports = {
 		new webpack.HotModuleReplacementPlugin(),
 		new NpmInstallPlugin({
 			save: true
+		}),
+		new webpack.optimize.DedupePlugin(),
+		new webpack.optimize.UglifyJsPlugin({minimize: true}),
+		new webpack.optimize.OccurenceOrderPlugin(),
+		new webpack.DefinePlugin({
+			'process.env': {
+				'NODE_ENV': JSON.stringify('production')
+			}
 		})
-//      new webpack.optimize.DedupePlugin(),
-//      new webpack.optimize.UglifyJsPlugin({minimize: true})
-
 	],
 
 	module: {
