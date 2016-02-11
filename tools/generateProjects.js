@@ -23,6 +23,8 @@ async function generateProjects({watch} = {})
 		if (!fs.lstatSync(projectPath).isDirectory())
 			return;
 
+		projectName = projectName.substring(3);
+
 		let projectProperties = JSON.parse(fs.readFileSync(path.join(projectPath, "properties.json")));
 		projectProperties["name"] = projectName;
 
