@@ -66,7 +66,18 @@ class ProjectPage extends Component {
 			<Title title="&nbsp;"
 			       subtitle="&nbsp;"
 			/>
-		</div>)
+		</div>);
+	}
+
+	downloadBadges() {
+		const badges = []
+		if (this.project.google_play) {
+			badges.push(<a className="project-page-download-badge" key={1} href={this.project.google_play}><img src="available_on_google_play.png"/></a>)
+		}
+		if (this.project.app_store) {
+			badges.push(<a className="project-page-download-badge" key={2} href={this.project.app_store}><img src="available_on_the_app_store_badge.png"/></a>)
+		}
+		return badges;
 	}
 
 	render() {
@@ -103,6 +114,11 @@ class ProjectPage extends Component {
 					}
 					</Slider>
 					<div className="project-page-description" dangerouslySetInnerHTML={{__html: this.state.projectDescription}} />
+					<div className="project-page-download-badges">
+					{
+						this.downloadBadges()
+					}
+					</div>
 					<Footer />
 				</div>
 			);
