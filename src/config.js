@@ -6,5 +6,5 @@
 
 export default {
 	title: 'Pavel Alexeev',
-	googleAnalyticsId: 'UA-XXXXX-X'
+	googleAnalyticsId: 'UA-33138859-9'
 };
