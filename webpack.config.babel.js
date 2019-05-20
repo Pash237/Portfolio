@@ -4,7 +4,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin'
 import config from './src/config'
 import NpmInstallPlugin from 'npm-install-webpack-plugin';
 
-const DEBUG = true;
+const DEBUG = false;
 
 module.exports = {
 	entry: {
